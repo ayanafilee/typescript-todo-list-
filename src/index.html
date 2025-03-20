@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App with JavaScript</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-container" id="authContainer">
+      <div class="auth-box">
+        <h2>Welcome to Todo App</h2>
+        <div class="auth-options">
+          <button id="showSignIn">Sign In</button>
+          <button id="showSignUp">Sign Up</button>
+        </div>
+
+        <form id="signInForm" class="auth-form">
+          <input
+            type="text"
+            placeholder="Username"
+            id="signInUsername"
+            required
+            class="Username"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="signInPassword"
+            required
+            class="password"
+          />
+          <button type="submit">Sign In</button>
+        </form>
+
+        <form id="signUpForm" class="auth-form" style="display: none">
+          <input
+            type="text"
+            placeholder="New Username"
+            id="signUpUsername"
+            required
+            class="Username"
+          />
+          <input
+            type="password"
+            placeholder="New Password"
+            id="signUpPassword"
+            required
+            class="password"
+          />
+          <button type="submit">Create Account</button>
+        </form>
+
+        <div id="authError" class="error-message"></div>
+      </div>
+    </div>
+
+    <div class="container" id="mainContainer" style="display: none">
+      <h1 class="main-heading">Todo List App</h1>
+
+      <form class="task-form" id="taskForm">
+        <input
+          type="text"
+          class="task-input"
+          id="taskInput"
+          placeholder="What needs to be done?"
+          required
+        />
+        <button type="submit" class="add-btn">Add Task</button>
+      </form>
+
+      <div class="todo-list-container" id="listContainer">
+        <h2 class="list-heading">Your Tasks</h2>
+        <ul class="task-list" id="taskList"></ul>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        ✨ No tasks yet! Add your first task above.
+      </div>
+    </div>
+
+    <script src="../dist/script.js"></script>
+  </body>
+</html>
